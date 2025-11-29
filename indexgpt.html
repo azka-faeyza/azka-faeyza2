@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pencegahan Bunuh Diri — Bantuan & Sumber Daya</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="mark">✚</div>
+        <div>
+          <div class="title">SelamatHidup</div>
+          <div class="subtitle">Dukungan & Pencegahan</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <button class="hamburger" aria-expanded="false" id="hamburger">☰</button>
+        <ul id="main-nav">
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#help">Cara Membantu</a></li>
+          <li><a href="#for-you">Untuk Anda</a></li>
+          <li><a href="#resources">Sumber</a></li>
+          <li><a href="#stories">Kisah</a></li>
+          <li><a class="cta" href="#emergency">Butuh Bantuan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-inner">
+        <h1>Jika Anda atau seseorang yang Anda kenal sedang berjuang — Anda tidak sendiri.</h1>
+        <p class="lead">Situs ini memberikan informasi praktis, langkah menolong dengan aman, dan kontak darurat. Jika kondisi darurat — tekan tombol darurat atau hubungi layanan setempat segera.</p>
+
+        <div class="actions">
+          <a class="btn" href="#resources">Lihat Sumber</a>
+          <a class="btn-outline" href="#safety-plan">Buat Rencana Keselamatan</a>
+        </div>
+        <div class="note">Jika Anda dalam bahaya segera: <strong>hubungi layanan darurat setempat</strong> atau gunakan tombol di kanan.</div>
+      </div>
+
+      <aside class="emergency-card" id="emergency">
+        <div class="content">
+          <h2 class="emergency-note">Butuh Bantuan Sekarang?</h2>
+          <p class="small muted">Jika Anda berada di Indonesia dan butuh bantuan segera, hubungi layanan darurat setempat atau hotline konseling.</p>
+          <p>Nomor darurat: <strong>119</strong></p>
+        </div>
+        <button class="emergency-btn" id="openModal">TOMBOL DARURAT</button>
+      </aside>
+    </section>
+
+    <section id="about" class="container">
+      <h2>Tentang Kami</h2>
+      <p class="muted">Misi: memberi informasi yang aman, membantu, dan bertanggung jawab untuk mencegah bunuh diri serta menghubungkan orang ke dukungan profesional.</p>
+    </section>
+
+    <section id="help" class="container">
+      <h2>Cara Menolong Orang Lain</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Mendengarkan dengan Empati</h3>
+          <p class="small muted">Dengarkan tanpa menghakimi.</p>
+        </article>
+        <article class="card">
+          <h3>Tanyakan dengan Lembut</h3>
+          <p class="small muted">Tanyakan apakah mereka memiliki niat atau rencana.</p>
+        </article>
+        <article class="card">
+          <h3>Buat Rencana Keselamatan</h3>
+          <p class="small muted">Bantu susun rangkaian langkah aman.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="for-you" class="container">
+      <h2>Untuk Anda yang Sedang Berjuang</h2>
+      <div class="safety-plan">
+        <h3>Contoh Rencana</h3>
+        <ol>
+          <li>Latihan tenang: tarik napas dan pindah ruangan.</li>
+          <li>Hubungi orang terdekat.</li>
+          <li>Simpan nomor darurat.</li>
+          <li>Buat lingkungan lebih aman.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="resources" class="container">
+      <h2>Sumber & Dukungan</h2>
+      <div class="grid cards">
+        <div class="card">
+          <h3>Hotline</h3>
+          <p class="small muted">119 atau hotline konseling.</p>
+        </div>
+        <div class="card">
+          <h3>Organisasi</h3>
+          <p class="small muted">Daftar organisasi kesehatan mental.</p>
+        </div>
+        <div class="card">
+          <h3>Artikel</h3>
+          <p class="small muted">Mitos, fakta, dan edukasi.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="container">
+      <h2>Kisah Harapan</h2>
+      <div class="grid cards">
+        <article class="card">
+          <h3>Pemulihan</h3>
+          <p class="small muted">Cerita pemulihan (anonim).</p>
+        </article>
+        <article class="card">
+          <h3>Testimoni</h3>
+          <p class="small muted">Pengalaman dukungan sosial.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Kontak</h2>
+      <p class="muted">Form, email, lokasi.</p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <strong>SelamatHidup</strong>
+    <div class="small muted">© 2025 — Semua hak dilindungi</div>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <button class="close" id="closeModal">✕</button>
+      <h2>Bantuan Darurat</h2>
+      <ul class="small muted">
+        <li>119</li>
+        <li>Hotline Konseling lainnya</li>
+      </ul>
+      <button class="btn" onclick="alert('Hubungi layanan darurat')">Hubungi Sekarang</button>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('main-nav');
+
+    hamburger.addEventListener('click',()=>{
+      const open = mainNav.style.display==='flex';
+      mainNav.style.display=open?'none':'flex';
+    });
+
+    const modalBackdrop=document.getElementById('modalBackdrop');
+    document.getElementById('openModal').onclick=()=>modalBackdrop.style.display='flex';
+    document.getElementById('closeModal').onclick=()=>modalBackdrop.style.display='none';
+  </script>
+</body>
+</html>
+
+
